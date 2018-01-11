@@ -6,6 +6,11 @@
 ul {
   list-style: none; }
 
+.icon.-large {
+  font-size: 48px;
+  margin-bottom: 5px;
+  color: #31aadf; }
+
 .flex-1 {
   width: 8.3333%; }
 
@@ -81,7 +86,7 @@ ul {
     margin-bottom: 140px; }
   .landing-page button {
     width: 410px;
-    background-color: #f1de01;
+    background-color: #ffba00;
     font-family: "Roboto";
     font-size: 16px;
     text-transform: uppercase;
@@ -107,7 +112,8 @@ ul {
     .landing-page .info .tax-info {
       font-family: "Agency FB";
       text-transform: uppercase;
-      font-weight: 600; }
+      font-weight: 600;
+      text-align: left; }
       .landing-page .info .tax-info header {
         display: flex;
         justify-content: space-between;
@@ -128,3 +134,93 @@ ul {
     padding-top: 350px;
     min-height: 200px;
     background-image: url("../img/buildings.png"); }
+
+.calc-page nav {
+  position: relative;
+  top: 85px;
+  left: 23px; }
+  .calc-page nav a {
+    font-size: 18px;
+    color: #31aadf;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    text-decoration: none; }
+
+.calc-page footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top: 30px;
+  padding-bottom: 20px;
+  min-height: 100px;
+  background-color: #31aadf;
+  font-family: "Bebas Neue", sans-serif;
+  color: #fff; }
+
+.calc-content {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  background-image: url("../img/header.png");
+  background-repeat: no-repeat;
+  margin-top: 25px; }
+  .calc-content .devices-table table {
+    margin-top: 125px;
+    margin-left: 30px;
+    border-collapse: collapse; }
+    .calc-content .devices-table table tr {
+      border-bottom: 1px solid #c1c1c1; }
+    .calc-content .devices-table table tr:first-child {
+      border: 0px; }
+    .calc-content .devices-table table tr:last-child {
+      border: 0px; }
+      .calc-content .devices-table table tr:last-child td:first-child {
+        text-align: start; }
+    .calc-content .devices-table table th {
+      padding: 5px 20px;
+      color: #1b6bb0;
+      font-size: 14px;
+      font-weight: 800; }
+    .calc-content .devices-table table td {
+      text-align: center;
+      font-size: 13px;
+      padding: 10px 0px;
+      color: #4d4d4d; }
+      .calc-content .devices-table table td ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around; }
+        .calc-content .devices-table table td ul li {
+          margin: 5px 0; }
+      .calc-content .devices-table table td input {
+        width: 35px;
+        padding: 5px 3px;
+        border-radius: 3px;
+        border: 1px solid #777777;
+        text-align: center;
+        color: #4e4e4e; }
+    .calc-content .devices-table table td:first-child input {
+      width: 90%;
+      text-align: start; }
+    .calc-content .devices-table table td:nth-last-child(-n+3) {
+      color: #000;
+      font-weight: 600;
+      font-size: 14px; }
+
+.show-result {
+  margin: 45px 0;
+  border: 7px solid #31aadf;
+  text-align: center;
+  padding: 30px 0px; }
+  .show-result h1 {
+    font-size: 36px;
+    letter-spacing: 1.5px;
+    color: #31aadf;
+    font-family: "Bebas Neue", sans-serif;
+    text-transform: uppercase; }
+    .show-result h1 span {
+      color: #ffba00; }
+
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("../fonts/BebasNeue.otf"); }

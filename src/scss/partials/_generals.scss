@@ -7,3 +7,11 @@
 ul {
     list-style: none;
 }
+
+.icon {
+    &.-large {
+        font-size: 48px;
+        margin-bottom: 5px;
+        color: $primaryColor;
+    }
+}
