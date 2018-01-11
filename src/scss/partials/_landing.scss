@@ -1,0 +1,110 @@
+.landing-page {
+    background-color: $primaryColor;
+    width: 100%;
+    margin: 0 auto;
+    color: #fff;
+
+    img {
+        max-height: 450px; 
+    }
+    .introduction-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-end;
+        
+        h1 {
+            width: 410px;
+            font-family: "Agency FB", sans-serif;
+            text-transform: uppercase;
+            font-size: 54px;
+            letter-spacing: 5.8px;
+        }
+        p {
+            width: 410px;
+            text-align: justify;
+            font-family: "Roboto", serif;
+            font-weight: 400;
+            letter-spacing: 1px;
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
+    .welcome {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 140px;
+    }
+    button {
+        width: 410px;
+        background-color: $contrastColor;
+        font-family: "Roboto";
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 1.02px;
+        padding: 20px 0;
+        border-radius: 3px;
+        border-top: 0;
+        border-left: 0;
+        border-color: #fdcb2e;
+    }
+
+    .info {
+        width: 85%;
+        margin: 0 auto;
+        border-top: 10px solid #fdcb2e;
+        padding-top: 40px;
+        text-align: center;
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            li {
+                margin-bottom: 40px;
+            }
+        }
+
+        .tax-info {
+            font-family: "Agency FB";
+            text-transform: uppercase;
+            font-weight: 600;
+
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                h2 {
+                    font-size: 45px;
+                }
+
+                p {
+                    text-align: right;
+                    font-size: 16px;
+
+                    span {
+                        font-size: 18px;
+                        color: #fdcb2e;
+                    }
+                }
+            }
+
+            .time-lapse {
+                font-size: 29px;
+                letter-spacing: 1.4px;
+            }
+        }
+
+        
+    }
+
+    footer {
+        margin-top: 150px;
+        padding-top: 350px;
+        min-height: 200px;
+        background-image: url("../img/buildings.png");
+    }
+}
