@@ -4,9 +4,6 @@
     margin: 0 auto;
     color: #fff;
 
-    img {
-        max-height: 450px; 
-    }
     .introduction-text {
         display: flex;
         flex-direction: column;
@@ -35,6 +32,93 @@
         justify-content: space-around;
         margin-bottom: 140px;
     }
+
+    .info {
+        font-family: "Agency FB", sans-serif;
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 10px solid $contrastColor;
+            color: $contrastColor;
+
+            h2 {
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-size: 34px;
+            }
+
+            select {
+                border: 0px;
+                background-color: rgba(0, 0, 0, 0);
+                color: #fff;
+                font-size: 30px;
+                font-family: "Agency FB", sans-serif;
+                text-transform: uppercase;
+                font-weight: 600;
+                letter-spacing: 2px;
+
+                option {
+                    background-color: $secondaryColor;
+                    border: 1px solid #fff;
+                }
+            }
+        }
+
+        .rates {
+            display: flex;
+            justify-content: space-between;
+
+            .rate-title {
+                margin: 50px 0;
+                border-bottom: 5px solid #fff;
+
+                h1 {
+                    font-size: 45px;
+                    text-transform: uppercase;
+                    letter-spacing: 1.5px;
+                }
+            }
+
+            .rate-content {
+                ul {
+                    li {
+                        margin-bottom: 30px;
+                        padding-bottom: 30px;
+                        border-bottom: 2px solid $secondaryColor;
+                    }
+                    li:last-child {
+                        border-bottom: 0px;
+                    }
+                }
+                h3 {
+                    
+                    font-size: 30px;
+                    text-transform: uppercase;
+                    letter-spacing: 1.5px;
+                    margin-bottom: 30px;
+                }
+                .range-price {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+
+                    p {
+                        font-size: 21px;
+                        color: $secondaryColor;
+                        font-weight: 600;
+                    }
+
+                    h1 {
+                        font-size: 50px;
+                        line-height: 50px;
+                        color: $contrastColor;
+                    }
+                }
+            }
+        }
+    }
+
     button {
         width: 410px;
         background-color: $contrastColor;
@@ -48,58 +132,6 @@
         border-top: 0;
         border-left: 0;
         border-color: #fdcb2e;
-    }
-
-    .info {
-        width: 85%;
-        margin: 0 auto;
-        border-top: 10px solid #fdcb2e;
-        padding-top: 40px;
-        text-align: center;
-
-        ul {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-
-            li {
-                margin-bottom: 40px;
-            }
-        }
-
-        .tax-info {
-            font-family: "Agency FB";
-            text-transform: uppercase;
-            font-weight: 600;
-            text-align: left;
-
-            header {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-
-                h2 {
-                    font-size: 45px;
-                }
-
-                p {
-                    text-align: right;
-                    font-size: 16px;
-
-                    span {
-                        font-size: 18px;
-                        color: #fdcb2e;
-                    }
-                }
-            }
-
-            .time-lapse {
-                font-size: 29px;
-                letter-spacing: 1.4px;
-            }
-        }
-
-        
     }
 
     footer {

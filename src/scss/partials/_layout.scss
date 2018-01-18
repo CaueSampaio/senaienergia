@@ -54,4 +54,10 @@
 .container {
     width: 1140px;
     margin: 0 auto;
+
+    &.-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }

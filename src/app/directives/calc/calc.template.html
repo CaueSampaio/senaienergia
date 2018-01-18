@@ -1,21 +1,45 @@
-<div class="calc-page">
+<div class="calc-page" ng-controller="calcController">
+    <header>.
+        <div class="container -row">
+            <img src="../img/logo.png" alt="Senai SP Logo">
+            <nav>
+                <ul>
+                    <li>
+                        <a ui-sref="landing">Inicio</a>
+                    </li>
+                    <li>
+                        <a ui-sref="landing">Senai</a>
+                    </li>
+                    <li>
+                        <a ui-sref="landing">Instruções</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     <div class="container">
-        <nav>
-            <a ui-sref="landing">
-                <i class="far fa-arrow-alt-circle-left"></i>
+        <div class="select-company">
+            <div class="select-label">
+                <h2>Selecione a sua companhia abaixo</h2>
+            </div>
 
-                Página inicial</a>
-        </nav>
+            <div class="select-container">
+                <!-- <span>Companhia:</span> -->
+                <select name="company" id="company">
+                    <option value="Eletropaulo">Eletropaulo</option>
+                    <option value="Light">Light</option>
+                    <option value="AES">AES</option>
+                </select>
+            </div>
+        </div>
         <div class="calc-content">
             <div class="devices-table">
                 <table>
                     <tr>
                         <th>Aparelho elétrico</th>
                         <th>Potência (W)</th>
-                        <th>Qtd</th>
-                        <th>Consumo
-                            <br>kWh/dia</th>
-                        <th>Faixas de
+                        <th>Quantidade</th>
+                        <th colspan="2">Faixas de
                             <br>horário</th>
                         <th>Tempo de
                             <br>uso(min/dia)</th>
@@ -24,176 +48,86 @@
                         <th>Preço
                             <br>tarifa branca</th>
                     </tr>
-                    <tr>
-                        <td>Ferro elétrico automático</td>
-                        <td>15W</td>
-                        <td>1un</td>
-                        <td>2,00</td>
+                    <tr ng-repeat="device in deviceList">
                         <td>
-                            <ul>
-                                <li>00:00 às 16:29/21:31 às 23:59</li>
-                                <li>16:30 às 17:29/20:31 às 21:30</li>
-                                <li>17:30 às 20:30</li>
-                            </ul>
+                            <div class="input-field">
+                                <input type="text" ng-model="device.name" value="device.name">
+                            </div>
                         </td>
                         <td>
-                            <ul>
-                                <li>120</li>
-                                <li>120</li>
-                                <li>0</li>
-                            </ul>
+                            <div class="input-field">
+                                <input type="number" string-to-number ng-model="device.power">
+                                <span>W</span>
+                            </div>
                         </td>
                         <td>
-                            <ul>
-                                <li>R$21,20</li>
-                                <li>R$21,20</li>
-                                <li>R$00,00</li>
-                            </ul>
-                        </td>
-                        <td>
-                            <ul>
-                                <li>
-                                    R$25,20
-                                </li>
-                                <li>
-                                    R$25,20
-                                </li>
-                                <li>
-                                    R$00,00
-                                </li>
-                            </ul>
-                        </td>
-                        <td>
-                            <i class="fas fa-trash-alt"></i>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Ferro elétrico automático</td>
-                        <td>15W</td>
-                        <td>1un</td>
-                        <td>2,00</td>
-                        <td>
-                            <ul>
-                                <li>00:00 às 16:29/21:31 às 23:59</li>
-                                <li>16:30 às 17:29/20:31 às 21:30</li>
-                                <li>17:30 às 20:30</li>
-                            </ul>
-                        </td>
-                        <td>
-                            <ul>
-                                <li>120</li>
-                                <li>120</li>
-                                <li>0</li>
-                            </ul>
-                        </td>
-                        <td>
-                            <ul>
-                                <li>R$21,20</li>
-                                <li>R$21,20</li>
-                                <li>R$00,00</li>
-                            </ul>
-                        </td>
-                        <td>
-                            <ul>
-                                <li>
-                                    R$25,20
-                                </li>
-                                <li>
-                                    R$25,20
-                                </li>
-                                <li>
-                                    R$00,00
-                                </li>
-                            </ul>
-                        </td>
-                        <td>
-                            <i class="fas fa-trash-alt"></i>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Ferro elétrico automático</td>
-                        <td>15W</td>
-                        <td>1un</td>
-                        <td>2,00</td>
-                        <td>
-                            <ul>
-                                <li>00:00 às 16:29/21:31 às 23:59</li>
-                                <li>16:30 às 17:29/20:31 às 21:30</li>
-                                <li>17:30 às 20:30</li>
-                            </ul>
-                        </td>
-                        <td>
-                            <ul>
-                                <li>120</li>
-                                <li>120</li>
-                                <li>0</li>
-                            </ul>
-                        </td>
-                        <td>
-                            <ul>
-                                <li>R$21,20</li>
-                                <li>R$21,20</li>
-                                <li>R$00,00</li>
-                            </ul>
-                        </td>
-                        <td>
-                            <ul>
-                                <li>
-                                    R$25,20
-                                </li>
-                                <li>
-                                    R$25,20
-                                </li>
-                                <li>
-                                    R$00,00
-                                </li>
-                            </ul>
-                        </td>
-                        <td>
-                            <i class="fas fa-trash-alt"></i>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input placeholder="Nome do aparelho">
-                        </td>
-                        <td>
-                            <input>
-                        </td>
-                        <td>
-                            <input>
-                        </td>
-                        <td>
-                            <input>
-                        </td>
-                        <td>
-                            <ul>
-                                <li>00:00 às 16:29/21:31 às 23:59</li>
-                                <li>16:30 às 17:29/20:31 às 21:30</li>
-                                <li>17:30 às 20:30</li>
-                            </ul>
-                        </td>
-                        <td>
-                            <ul>
-                                <li>
-                                    <input>
-                                </li>
-                                <li>
-                                    <input>
-                                </li>
-                                <li>
-                                    <input>
-                                </li>
-                            </ul>
+                            <div class="input-field">
+                                <input type="number" string-to-number ng-model="device.quantity">
+                                <span>un</span>
+                            </div>
                         </td>
                         <td colspan="2">
-                            <i class="fas fa-plus-circle icon -large"></i>
-                            <br> Adicionar aparelho na lista
+                            <ul>
+                                <li>00:00 às 16:29/21:31 às 23:59</li>
+                                <li>16:30 às 17:29/20:31 às 21:30</li>
+                                <li>17:30 às 20:30</li>
+                            </ul>
                         </td>
-                        <td></td>
+                        <td>
+                            <ul>
+                                <li>
+                                    <div class="input-field">
+                                        <input type="number" string-to-number ng-model="device.time[0]">
+                                        <span>m</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="input-field">
+                                        <input type="number" string-to-number ng-model="device.time[1]">
+                                        <span>m</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="input-field">
+                                        <input type="number" string-to-number ng-model="device.time[2]">
+                                        <span>m</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>R$21,20</li>
+                                <li>R$21,20</li>
+                                <li>R$00,00</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>
+                                    R$25,20
+                                </li>
+                                <li>
+                                    R$25,20
+                                </li>
+                                <li>
+                                    R$00,00
+                                </li>
+                            </ul>
+                        </td>
+                        <td>
+                            <!-- <i class="fas fa-pencil-alt"></i>
+                            <br> -->
+                            <button ng-click="deleteDevice($index)">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </td>
                     </tr>
                     <tr>
-                        <td colspan="6">
+                        <td colspan="5">
+
+                        </td>
+                        <td>
                             Total:
                         </td>
                         <td>
@@ -201,11 +135,64 @@
                         </td>
                         <td>R$258,00</td>
                     </tr>
+                    <tr>
+                        <td>
+                            <input ng-model="newDevice.name" placeholder="Nome do aparelho">
+                        </td>
+                        <td>
+                            <input ng-model="newDevice.power" placeholder="Potencia">
+                        </td>
+                        <td>
+                            <input ng-model="newDevice.quantity" placeholder="Qtd">
+                        </td>
+                        <td colspan="2">
+                            <ul>
+                                <li>00:00 às 16:29/21:31 às 23:59</li>
+                                <li>16:30 às 17:29/20:31 às 21:30</li>
+                                <li>17:30 às 20:30</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>
+                                    <input ng-model="newDevice.time[0]" placeholder="min">
+                                </li>
+                                <li>
+                                    <input ng-model="newDevice.time[1]" placeholder="min">
+                                </li>
+                                <li>
+                                    <input ng-model="newDevice.time[2]" placeholder="min">
+                                </li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>+ R$21,20</li>
+                                <li>+ R$21,20</li>
+                                <li> +R$00,00</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>+ R$21,20</li>
+                                <li>+ R$21,20</li>
+                                <li> +R$00,00</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <button ng-click="addDevice(newDevice)">
+                                <i class="fas fa-plus-circle icon -large"></i>
+                            </button>
+                        </td>
+                    </tr>
+
                 </table>
             </div>
         </div>
         <div class="show-result">
-            <h1>Você <span>economizará</span> R$20,00/mês ao mudar para a tarifa branca!</h1>
+            <h1>
+                Mude para a
+                <span>tarifa branca</span> e economize R$20,00/mês</h1>
         </div>
     </div>
     <footer>

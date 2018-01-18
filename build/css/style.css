@@ -7,7 +7,7 @@ ul {
   list-style: none; }
 
 .icon.-large {
-  font-size: 48px;
+  font-size: 40px;
   margin-bottom: 5px;
   color: #31aadf; }
 
@@ -53,14 +53,16 @@ ul {
 .container {
   width: 1140px;
   margin: 0 auto; }
+  .container.-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
 
 .landing-page {
   background-color: #31aadf;
   width: 100%;
   margin: 0 auto;
   color: #fff; }
-  .landing-page img {
-    max-height: 450px; }
   .landing-page .introduction-text {
     display: flex;
     flex-direction: column;
@@ -84,9 +86,65 @@ ul {
     display: flex;
     justify-content: space-around;
     margin-bottom: 140px; }
+  .landing-page .info {
+    font-family: "Agency FB", sans-serif; }
+    .landing-page .info header {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 10px solid #f1de01;
+      color: #f1de01; }
+      .landing-page .info header h2 {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 34px; }
+      .landing-page .info header select {
+        border: 0px;
+        background-color: transparent;
+        color: #fff;
+        font-size: 30px;
+        font-family: "Agency FB", sans-serif;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 2px; }
+        .landing-page .info header select option {
+          background-color: #1b6bb0;
+          border: 1px solid #fff; }
+    .landing-page .info .rates {
+      display: flex;
+      justify-content: space-between; }
+      .landing-page .info .rates .rate-title {
+        margin: 50px 0;
+        border-bottom: 5px solid #fff; }
+        .landing-page .info .rates .rate-title h1 {
+          font-size: 45px;
+          text-transform: uppercase;
+          letter-spacing: 1.5px; }
+      .landing-page .info .rates .rate-content ul li {
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        border-bottom: 2px solid #1b6bb0; }
+      .landing-page .info .rates .rate-content ul li:last-child {
+        border-bottom: 0px; }
+      .landing-page .info .rates .rate-content h3 {
+        font-size: 30px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-bottom: 30px; }
+      .landing-page .info .rates .rate-content .range-price {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start; }
+        .landing-page .info .rates .rate-content .range-price p {
+          font-size: 21px;
+          color: #1b6bb0;
+          font-weight: 600; }
+        .landing-page .info .rates .rate-content .range-price h1 {
+          font-size: 50px;
+          line-height: 50px;
+          color: #f1de01; }
   .landing-page button {
     width: 410px;
-    background-color: #ffba00;
+    background-color: #f1de01;
     font-family: "Roboto";
     font-size: 16px;
     text-transform: uppercase;
@@ -97,76 +155,110 @@ ul {
     border-top: 0;
     border-left: 0;
     border-color: #fdcb2e; }
-  .landing-page .info {
-    width: 85%;
-    margin: 0 auto;
-    border-top: 10px solid #fdcb2e;
-    padding-top: 40px;
-    text-align: center; }
-    .landing-page .info ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between; }
-      .landing-page .info ul li {
-        margin-bottom: 40px; }
-    .landing-page .info .tax-info {
-      font-family: "Agency FB";
-      text-transform: uppercase;
-      font-weight: 600;
-      text-align: left; }
-      .landing-page .info .tax-info header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center; }
-        .landing-page .info .tax-info header h2 {
-          font-size: 45px; }
-        .landing-page .info .tax-info header p {
-          text-align: right;
-          font-size: 16px; }
-          .landing-page .info .tax-info header p span {
-            font-size: 18px;
-            color: #fdcb2e; }
-      .landing-page .info .tax-info .time-lapse {
-        font-size: 29px;
-        letter-spacing: 1.4px; }
   .landing-page footer {
     margin-top: 150px;
     padding-top: 350px;
     min-height: 200px;
     background-image: url("../img/buildings.png"); }
 
-.calc-page nav {
-  position: relative;
-  top: 85px;
-  left: 23px; }
-  .calc-page nav a {
-    font-size: 18px;
-    color: #31aadf;
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    text-decoration: none; }
+.calc-page {
+  background-color: #eaeaea; }
+  .calc-page input {
+    font-family: "Fjalla One", sans-serif; }
+  .calc-page header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+    background-color: #31aadf; }
+    .calc-page header img {
+      max-height: 30px; }
+    .calc-page header nav ul {
+      display: flex; }
+      .calc-page header nav ul li {
+        margin: 0 8px; }
+        .calc-page header nav ul li a {
+          text-decoration: none;
+          color: #fff;
+          font-family: "Fjalla One", sans-serif;
+          text-transform: uppercase;
+          font-size: 14px;
+          letter-spacing: 1.8px; }
+      .calc-page header nav ul li:first-child {
+        margin-left: 0; }
+      .calc-page header nav ul li:last-child {
+        margin-right: 0; }
+  .calc-page button {
+    border: 0px;
+    background-color: #fff;
+    font-size: 18px; }
+  .calc-page footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    min-height: 50px;
+    background-color: #31aadf;
+    font-family: "Fjalla One", sans-serif;
+    color: #fff; }
 
-.calc-page footer {
+.select-company {
+  margin: 30px auto 0 auto;
+  width: 100%;
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  margin-top: 30px;
-  padding-bottom: 20px;
-  min-height: 100px;
-  background-color: #31aadf;
-  font-family: "Bebas Neue", sans-serif;
-  color: #fff; }
+  flex-direction: column;
+  align-items: center; }
+  .select-company img {
+    max-width: 70px; }
+  .select-company .select-label {
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 30px 90px;
+    border-radius: 15px 15px 0 0; }
+    .select-company .select-label h2 {
+      font-family: "Fjalla One", sans-serif;
+      font-size: 26px;
+      letter-spacing: 1.8px;
+      font-weight: 100;
+      text-transform: uppercase;
+      color: #1b6bb0; }
+  .select-company .select-container {
+    background-color: #f1de01;
+    width: 100%;
+    text-align: center;
+    padding: 10px; }
+    .select-company .select-container span {
+      font-family: "Fjalla One";
+      font-size: 20px;
+      text-transform: uppercase;
+      color: #000;
+      opacity: 0.7; }
+    .select-company .select-container select {
+      font-family: "Fjalla One";
+      border: 0px;
+      background-color: #f1de01;
+      color: #000;
+      opacity: 0.7;
+      font-size: 20px;
+      text-transform: uppercase; }
+      .select-company .select-container select option {
+        border: transparent;
+        color: #6c6300; }
+  .select-company .triangle {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 20px solid #fdcb2e; }
 
 .calc-content {
-  font-family: "Roboto", sans-serif;
+  font-family: "Fjalla One", sans-serif;
   display: flex;
   justify-content: center;
-  background-image: url("../img/header.png");
-  background-repeat: no-repeat;
-  margin-top: 25px; }
+  background-color: #fff;
+  padding: 30px 0 0 0; }
   .calc-content .devices-table table {
-    margin-top: 125px;
-    margin-left: 30px;
     border-collapse: collapse; }
     .calc-content .devices-table table tr {
       border-bottom: 1px solid #c1c1c1; }
@@ -174,52 +266,78 @@ ul {
       border: 0px; }
     .calc-content .devices-table table tr:last-child {
       border: 0px; }
+      .calc-content .devices-table table tr:last-child input {
+        margin-left: 0px; }
       .calc-content .devices-table table tr:last-child td:first-child {
         text-align: start; }
+      .calc-content .devices-table table tr:last-child td:last-child {
+        border-top: 1px solid #c1c1c1; }
     .calc-content .devices-table table th {
       padding: 5px 20px;
       color: #1b6bb0;
-      font-size: 14px;
+      font-size: 18px;
       font-weight: 800; }
     .calc-content .devices-table table td {
       text-align: center;
       font-size: 13px;
-      padding: 10px 0px;
+      padding: 10px 15px;
       color: #4d4d4d; }
       .calc-content .devices-table table td ul {
         display: flex;
         flex-direction: column;
         justify-content: space-around; }
         .calc-content .devices-table table td ul li {
-          margin: 5px 0; }
+          margin: 5px 0;
+          line-height: 26px; }
       .calc-content .devices-table table td input {
-        width: 35px;
-        padding: 5px 3px;
+        width: 80px;
+        padding: 5px 5px;
+        margin-left: -15px;
         border-radius: 3px;
         border: 1px solid #777777;
         text-align: center;
-        color: #4e4e4e; }
-    .calc-content .devices-table table td:first-child input {
-      width: 90%;
-      text-align: start; }
+        color: #4e4e4e;
+        font-size: 14px; }
+    .calc-content .devices-table table td:first-child {
+      justify-content: center;
+      padding-left: 0px; }
+      .calc-content .devices-table table td:first-child input {
+        width: 80%;
+        text-align: center;
+        margin-left: 0px; }
     .calc-content .devices-table table td:nth-last-child(-n+3) {
       color: #000;
       font-weight: 600;
       font-size: 14px; }
+  .calc-content .devices-table .input-field {
+    margin: 0 auto; }
+    .calc-content .devices-table .input-field span {
+      margin-left: -35px; }
+    .calc-content .devices-table .input-field input {
+      border: 1px solid transparent;
+      min-width: 50px;
+      font-size: 14px; }
+    .calc-content .devices-table .input-field input:hover {
+      border: 1px solid #7a7a7a; }
+    .calc-content .devices-table .input-field input:focus {
+      border: 1px solid #7a7a7a; }
+  .calc-content .devices-table .input-field:hover span {
+    display: none; }
 
 .show-result {
-  margin: 45px 0;
-  border: 7px solid #31aadf;
+  margin: -5px 0px 45px 0px;
+  border: 5px solid #31aadf;
+  background-color: #fff;
   text-align: center;
   padding: 30px 0px; }
   .show-result h1 {
     font-size: 36px;
     letter-spacing: 1.5px;
     color: #31aadf;
-    font-family: "Bebas Neue", sans-serif;
+    font-family: "Fjalla One", sans-serif;
     text-transform: uppercase; }
     .show-result h1 span {
-      color: #ffba00; }
+      color: #f1de01; }
 
 @font-face {
   font-family: "Bebas Neue";

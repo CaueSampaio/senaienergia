@@ -3,13 +3,14 @@
         <div class="welcome">
             <img src="img/lamp.png" alt="Light image">
             <div class="introduction-text flex-6">
-                <h1>Bem vindo
-                    <br>a tarifa branca</h1>
+                <h1>Tarifa branca?
+                    <br>simule e decida</h1>
                 <p>
-                    Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o
-                    século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um
-                    livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a
-                    editoração eletrônica, permanecendo essencialmente inalterado.
+                    A tarifa branca veio para ajudar a diminuir a conta daqueles que contribuem com o horário de pico. Subdividida em 3 horários,
+                    que substituem a tarifa unica antes cobrada, tem que ser analisada para que não saia ainda mais caro.
+                    Suas faixas de horário são a hora de ponta, fora de ponta ou intermediária. Verifique os preços e horários
+                    na grade abaixo. Faça o teste no nosso sistema e confira qual a tarifa mais vantajosa para você/seu negócio.
+                    Faça o teste no nosso sistema e confira qual a tarifa mais vantajosa para você/seu negócio.
                 </p>
                 <a ui-sref="calculo">
                     <button>Clique aqui para simular sua conta</button>
@@ -18,72 +19,73 @@
         </div>
 
         <div class="info">
-            <ul>
-                <li class="flex-5">
-                    <div class="tax-info">
-                        <header>
-                            <div>
-                                <h2>Tarifa atual</h2>
-                            </div>
-                            <div>
-                                <p>
-                                    <span>R$419,61</span>
-                                    <br>Convencional</p>
-                            </div>
-                        </header>
-                        <div class="time-lapse">00:00 às 23:59hrs</div>
+            <header>
+                <h2>Selecionar companhia:</h2>
+                <select>
+                    <option value="Eletropaulo">Eletropaulo</option>
+                    <option value="Light">Light</option>
+                    <option value="Eletropaulo">Eletropaulo</option>
+                    <option value="Light">Light</option>
+                </select>
+            </header>
+            <div class="rates">
+                <div class="flex-5">
+                    <div class="rate-title">
+                        <h1>Tarifa atual</h1>
                     </div>
-                </li>
-                <li class="flex-5">
-                    <div class="tax-info">
-                        <header>
-                            <div>
-                                <h2>Tarifa branca</h2>
-                            </div>
-                            <div>
-                                <p>
-                                    <span>R$353,25</span>
-                                    <br>Fora de ponta</p>
-                            </div>
-                        </header>
-                        <div class="time-lapse">00:00 às 16:29hrs / 21:31 às 23:59</div>
+                    <div class="rate-content">
+                        <ul>
+                            <li>
+                                <div class="tax">
+                                    <h3>Convencional</h3>
+                                    <div class="range-price">
+                                        <p>00:00 às 23:59hrs</p>
+                                        <h1>R$419,61</h1>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                </li>
-                <li class="flex-5">
-                    <div class="tax-info">
-                        <header>
-                            <div>
-                                <h2>Tarifa branca</h2>
-                            </div>
-                            <div>
-                                <p>
-                                    <span>R$496,66</span>
-                                    <br>Intermediaria</p>
-                            </div>
-                        </header>
-                        <div class="time-lapse">16:30 às 17:29hrs / 20:31 às 21:30</div>
+                </div>
+                <div class="flex-5">
+                    <div class="rate-title">
+                        <h1>Tarifa branca</h1>
                     </div>
-                </li>
-                <li class="flex-5">
-                    <div class="tax-info">
-                        <header>
-                            <div>
-                                <h2>Tarifa branca</h2>
-                            </div>
-                            <div>
-                                <p>
-                                    <span>R$760,21</span>
-                                    <br>Ponta</p>
-                            </div>
-                        </header>
-                        <div class="time-lapse">17:30 às 20:30hrs</div>
+                    <div class="rate-content">
+                        <ul>
+                            <li>
+                                <div class="tax">
+                                    <h3>Fora de ponta</h3>
+                                    <div class="range-price">
+                                        <p>00:00 às 23:59hrs
+                                            <br>21:31 às 23:59hrs</p>
+                                        <h1>R$353,25</h1>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="tax">
+                                    <h3>Intermediaria</h3>
+                                    <div class="range-price">
+                                        <p>16:30 às 17:29hrs
+                                            <br>20:31 às 21:30hrs</p>
+                                        <h1>R$496,66</h1>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="tax">
+                                    <h3>Ponta</h3>
+                                    <div class="range-price">
+                                        <p>17:30 às 20:30hrs</p>
+                                        <h1>R$760,21</h1>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                </li>
-            </ul>
-
-            <a ui-sref="calculo">
-                <button>Clique aqui para simular sua conta</button>
-            </a>
+                </div>
+            </div>
         </div>
     </div>
     <footer>

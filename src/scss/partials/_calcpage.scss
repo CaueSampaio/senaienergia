@@ -1,40 +1,131 @@
 .calc-page {
-    nav {
-        position: relative;
-        top: 85px;
-        left: 23px;
-        a {
-            font-size: 18px;
-            color: $primaryColor;
-            font-family: "Roboto", sans-serif;
-            font-weight: 700;
-            text-decoration: none;
+    background-color: #eaeaea;
+    input {
+        font-family: "Fjalla One", sans-serif;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0px;
+        background-color: $primaryColor;
+
+        img {
+            max-height: 30px;
         }
+
+        nav {
+            ul {
+                display: flex;
+
+                li {
+                    margin: 0 8px;
+                    a {
+                        text-decoration: none;
+                        color: #fff;
+                        font-family: "Fjalla One", sans-serif;
+                        text-transform: uppercase;
+                        font-size: 14px;
+                        letter-spacing: 1.8px;
+                    }
+                }
+                li:first-child {
+                    margin-left: 0;
+                }
+                li:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    button {
+        border: 0px;
+        background-color: #fff;
+        font-size: 18px;
     }
     footer {
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         justify-content: center;
         margin-top: 30px;
-        padding-bottom: 20px;
-        min-height: 100px;
+        min-height: 50px;
         background-color: $primaryColor;
-        font-family: "Bebas Neue", sans-serif;
+        font-family: "Fjalla One", sans-serif;
         color: #fff;
     }
 }
 
+.select-company {
+    margin: 30px auto 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+        max-width: 70px;
+    }
+    .select-label {
+        background-color: #fff;
+        width: 100%;
+        text-align: center;
+        padding: 30px 90px;
+        border-radius: 15px 15px 0 0;
+
+        h2 {
+            font-family: "Fjalla One", sans-serif;
+            font-size: 26px;
+            letter-spacing: 1.8px;
+            font-weight: 100;
+            text-transform: uppercase;
+            color: $secondaryColor;
+        }
+    }
+    .select-container {
+        background-color: $contrastColor;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        span {
+            font-family: "Fjalla One";
+            font-size: 20px;
+            text-transform: uppercase;
+            color: #000;
+            opacity: 0.7; 
+        }
+        select {
+            font-family: "Fjalla One";
+            border: 0px;
+            background-color: $contrastColor;
+            color: #000;
+            opacity: 0.7;
+            font-size: 20px;
+            text-transform: uppercase;
+
+            option {
+                border: rgba(0, 0, 0, 0);
+                color: #6c6300;
+            }
+        }
+    }
+
+    .triangle {
+        width:0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-top: 20px solid #fdcb2e;
+    }
+    
+}
+
 .calc-content {
-    font-family: "Roboto", sans-serif;
+    font-family: "Fjalla One", sans-serif;
     display: flex;
     justify-content: center;
-    background-image: url("../img/header.png");
-    background-repeat: no-repeat;
-    margin-top: 25px;
+    background-color: #fff;
+    padding: 30px 0 0 0;
     .devices-table {
         table {
-            margin-top: 125px;
-            margin-left: 30px;
             border-collapse: collapse;
             tr {
                 border-bottom: 1px solid #c1c1c1;
@@ -44,20 +135,26 @@
             }
             tr:last-child {
                 border: 0px;
+                input {
+                    margin-left: 0px;
+                }
                 td:first-child {
                     text-align: start;
+                }
+                td:last-child {
+                    border-top: 1px solid #c1c1c1;
                 }
             }
             th {
                 padding: 5px 20px;
                 color: $secondaryColor;
-                font-size: 14px;
+                font-size: 18px;
                 font-weight: 800;
             }
             td {
                 text-align: center;
                 font-size: 13px;
-                padding: 10px 0px;
+                padding: 10px 15px;
                 color: rgb(77, 77, 77);
                 ul {
                     display: flex;
@@ -65,21 +162,27 @@
                     justify-content: space-around;
                     li {
                         margin: 5px 0;
+                        line-height: 26px;
                     }
                 }
                 input {
-                    width: 35px;
-                    padding: 5px 3px;
+                    width: 80px;
+                    padding: 5px 5px;
+                    margin-left: -15px;
                     border-radius: 3px;
                     border: 1px solid #777777;
                     text-align: center;
                     color: rgb(78, 78, 78);
+                    font-size: 14px;
                 }
             }
             td:first-child {
+                justify-content: center;
+                padding-left: 0px;
                 input {
-                    width: 90%;
-                    text-align: start;
+                    width: 80%;
+                    text-align: center;
+                    margin-left: 0px;
                 }
             }
             td:nth-last-child(-n+3) {
@@ -88,23 +191,49 @@
                 font-size: 14px;
             }
         }
-    }
 
-    
+        .input-field {
+            margin: 0 auto;
+
+            span {
+                margin-left: -35px;
+            }
+
+            input {
+                border: 1px solid rgba(0, 0, 0, 0);
+                min-width: 50px;
+                font-size: 14px;
+            }
+
+            input:hover {
+                border: 1px solid rgb(122, 122, 122);
+            }
+
+            input:focus {
+                border: 1px solid rgb(122, 122, 122);
+            }
+        }
+
+        .input-field:hover {
+            span{
+                display: none;
+            }
+        }
+    }
 }
 
 .show-result {
-    margin: 45px 0;
-    border: 7px solid $primaryColor;
+    margin: -5px 0px 45px 0px;
+    border: 5px solid $primaryColor;
+    background-color: #fff;
     text-align: center;
     padding: 30px 0px;
     h1 {
         font-size: 36px;
         letter-spacing: 1.5px;
         color: $primaryColor;
-        font-family: "Bebas Neue", sans-serif;
+        font-family: "Fjalla One", sans-serif;
         text-transform: uppercase;
-
         span {
             color: $contrastColor;
         }
