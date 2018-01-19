@@ -2,12 +2,22 @@ myApp.controller("calcController", ['Equipment', '$scope', function(Equipment, $
     $scope.deviceList = [];
 
     $scope.getEquipments = function(){
-        console.log("Chamou")
         Equipment.getEquipments($scope.deviceList)
         .then(function(promisse) {
             $scope.deviceList = promisse.data;
         })
     }
+
+    $scope.getCompanys = function() {
+        console.log("Chamou");
+        Equipment.getCompanys()
+        .then(function(promisse) {
+            $scope.companysList = promisse.data;
+            console.log($scope.companysList);
+        })
+    }
+
+    $scope.getCompanys();
     
     // $scope.deviceList = {
     //     devices: [{
@@ -34,6 +44,16 @@ myApp.controller("calcController", ['Equipment', '$scope', function(Equipment, $
         console.log($index);
         console.log($scope.deviceList)
         $scope.deviceList.splice($index, 1);
+    }
+
+    $scope.openModal = function() {
+        var modal = document.getElementsByClassName("modal");
+        modal[0].style.display = "block";
+    }
+
+    $scope.closeModal = function() {
+        var modal = document.getElementsByClassName("modal");
+        modal[0].style.display = "none";
     }
 
     $scope.getEquipments();

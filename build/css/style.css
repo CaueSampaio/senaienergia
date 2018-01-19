@@ -11,6 +11,9 @@ ul {
   margin-bottom: 5px;
   color: #31aadf; }
 
+button {
+  cursor: pointer; }
+
 .flex-1 {
   width: 8.3333%; }
 
@@ -163,6 +166,70 @@ ul {
 
 .calc-page {
   background-color: #eaeaea; }
+  .calc-page .modal {
+    display: none;
+    z-index: 1;
+    position: fixed;
+    min-width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6); }
+    .calc-page .modal .instructions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 60px auto;
+      position: relative;
+      padding: 45px 30px;
+      width: 915px;
+      opacity: 1;
+      background-color: #fff;
+      border-radius: 0 0 10px 10px; }
+      .calc-page .modal .instructions .close-modal {
+        position: absolute;
+        right: 15px;
+        top: 10px; }
+      .calc-page .modal .instructions h2 {
+        font-family: "Fjalla One", sans-serif;
+        font-size: 44px;
+        color: #31aadf;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-bottom: 20px;
+        padding: 0 20px;
+        border-bottom: 3px solid #31aadf; }
+      .calc-page .modal .instructions p {
+        font-family: "Fjalla One", sans-serif;
+        font-size: 16px;
+        color: #1b6bb0;
+        margin: 20px 0; }
+      .calc-page .modal .instructions p:last-child {
+        margin-bottom: 40px; }
+      .calc-page .modal .instructions button {
+        width: 410px;
+        background-color: #31aadf;
+        font-family: "Roboto";
+        font-size: 16px;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 1.02px;
+        padding: 20px 0;
+        border-radius: 3px;
+        border: 3px solid #1b6bb0;
+        border-top: 0;
+        border-left: 0; }
+      .calc-page .modal .instructions .close-modal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        color: #1b6bb0;
+        border: 1px solid #31aadf;
+        background-color: transparent;
+        font-size: 12px;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px; }
   .calc-page input {
     font-family: "Fjalla One", sans-serif; }
   .calc-page header {
@@ -184,7 +251,8 @@ ul {
           font-family: "Fjalla One", sans-serif;
           text-transform: uppercase;
           font-size: 16px;
-          letter-spacing: 1.8px; }
+          letter-spacing: 1.8px;
+          cursor: pointer; }
       .calc-page header nav ul li:first-child {
         margin-left: 0; }
       .calc-page header nav ul li:last-child {
@@ -211,11 +279,10 @@ ul {
   align-items: center; }
   .select-company .select-container {
     background-color: #f1de01;
-    border-radius: 30px 30px 0 0;
     width: 100%;
     text-align: center;
     padding: 20px;
-    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1); }
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2); }
     .select-company .select-container span {
       font-family: "Fjalla One";
       font-size: 24px;

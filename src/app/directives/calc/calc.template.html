@@ -1,7 +1,30 @@
 <div class="calc-page" ng-controller="calcController">
+    <div class="modal">
+        <div class="instructions">
+            <button ng-click="closeModal()" class="close-modal">X</button>
+            <h2>Como calcular sua tarifa</h2>
+            <div>
+                <p>1º Selecione a sua companhia elétrica, este passo é muito importante pois cada companhia tem os seus horários
+                    e as respectivas taxas.</p>
+                <p>2º Nosso sistema já conta com uma variedade de aparelhos para facilitar o seu calculo. Edite ou exclua os
+                    itens que não deseja na sua lista. Para editar algo, basta clicar em cima do campo desejado, para deletar
+                    clique na lixeira do lado direito.</p>
+                <p>3º Adicione aparelhos preenchendo o formulário ao final da tabela. Caso não haja nenhuma sugestão para o
+                    item que deseja, basta preencher todos os campos normalmente e clicar no botão + ao final do formulário.
+                    </p>
+                <p>4º Fique atento as medidas de unidade, elas são fundamentais para que o seu calculo fique o mais próximo
+                    possivel da realidade.</p>
+                <p>5º O resultado é gerado automaticamente, e você pode acompanhar a soma no campo de totalidade.</p>
+                <p>6º Aproveite e compartilhe o sistema!</p>
+            </div>
+            <a ng-click="closeModal()">
+                <button>Clique aqui para simular sua conta</button>
+            </a>
+        </div>
+    </div>
     <header>.
         <div class="container -row">
-            <img src="../img/logo.png" alt="Senai SP Logo">
+            <a ui-sref="calculo"><img src="../img/logo.png" alt="Senai SP Logo"></a>
             <nav>
                 <ul>
                     <li>
@@ -10,8 +33,8 @@
                     <li>
                         <a href="http://www.sp.senai.br/">Senai</a>
                     </li>
-                    <li>
-                        <a ui-sref="landing">Instruções</a>
+                    <li ng-click="openModal()">
+                        <a>Instruções</a>
                     </li>
                 </ul>
             </nav>
