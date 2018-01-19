@@ -4,7 +4,7 @@ myApp.factory("Equipment", function($http) {
     }
 
     var _getCompanys = function() {
-        return $http.get("https://private-7a98db-senaienergy.apiary-mock.com/companys");
+        return $http.get("https://private-7a98db-senaienergy.apiary-mock.com/rates");
     }
 
     return {

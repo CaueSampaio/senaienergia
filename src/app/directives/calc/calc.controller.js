@@ -38,6 +38,7 @@ myApp.controller("calcController", ['Equipment', '$scope', function(Equipment, $
 
     $scope.addDevice = function() {
         $scope.deviceList.push($scope.newDevice);
+        $scope.newDevice = "";
     }
 
     $scope.deleteDevice = function($index) {

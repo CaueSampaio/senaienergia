@@ -145,6 +145,10 @@ button {
           font-size: 50px;
           line-height: 50px;
           color: #f1de01; }
+      .landing-page .info .rates .button-rate {
+        width: fit-content;
+        margin: 0 auto;
+        margin-top: 50%; }
   .landing-page button {
     width: 410px;
     background-color: #f1de01;
